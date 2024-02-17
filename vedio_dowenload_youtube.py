@@ -1,5 +1,5 @@
 from pytube import YouTube
-from tkinter import Tk, Label, Entry, Button, Listbox, filedialog
+from tkinter import Tk, Label, Entry, Button, Listbox, StringVar, filedialog
 
 def download_video():
     url = url_entry.get()
@@ -40,7 +40,7 @@ listbox.pack()
 Button(root, text="Choose Download Location", command=choose_download_location).pack()
 
 # Display chosen download location
-folder_var = Tk().StringVar()
+folder_var = StringVar()
 Label(root, textvariable=folder_var).pack()
 
 # Download Selected Video Button
